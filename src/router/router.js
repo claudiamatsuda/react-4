@@ -14,7 +14,7 @@ const MyRouter = () => (
   <React.Fragment>
     <Layout>
       <Route exact path="/" component={App} />
-      <Route exact path="details" component={DetailsPage} />
+      <Route exact path="/details/:characterId" component={DetailsPage} />
     </Layout>
   </React.Fragment>
 );

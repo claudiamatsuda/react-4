@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import SearchForm from '../SearchForm/SearchForm';
+import { requestCharacters } from '../../redux/characters/types';
 
 const Field = ({ component, ...props }) => <input {...props} />;
 
@@ -14,7 +16,7 @@ class SearchBar extends Component {
           placeholder="Buscar Personagens"
           component={SearchForm}
           type="text"
-          onChange={() => console.log()}
+          onChange={e => this.props.requestCharacters(e.target.value)}
           data-testid="SearchBar"
         />
       </div>
@@ -22,4 +24,7 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+export default connect(
+  null,
+  { requestCharacters }
+)(SearchBar);

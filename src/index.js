@@ -16,7 +16,7 @@ import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga"; // SAGA
 import rootReducers from "./redux/rootReducers";
 import rootSagas from "./redux/rootSagas";
-import { showCharacters } from './redux/characters/types';
+// import { showCharacters } from './redux/characters/types';
 
 // Router
 import MyRouter from "./router/router";
