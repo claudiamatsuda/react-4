@@ -11,14 +11,14 @@ const CharacterConteiner = styled.div`
 `;
 
 const charactersListItem = props => (
-  <CharacterConteiner>
-    <h1> {props.character.name} </h1>
+  <CharacterConteiner data-testid="characterlistitem-container">
+    <h1> {props.character && props.character.name} </h1>
     <img
-      src={`${props.character.thumbnail.path}.${props.character.thumbnail.extension}`}
+      src={`${props.character && props.character.thumbnail.path}.${props.character && props.character.thumbnail.extension}`}
       alt="character"
       width="100%"
     />
-    <p>{props.character.description}</p>
+    <p>{props.character && props.character.description}</p>
     <Button onClick={() => props.history.push(`/details/${props.character.id}`)}>Detalhes</Button>
   </CharacterConteiner>
 );

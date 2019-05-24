@@ -28,6 +28,7 @@ class SearchForm extends Component {
           <Input
             {...input}
             id={id}
+            data-testid="searchform-container"
             type={type || 'text'}
             placeholder={placeholder}
             disabled={disabled}

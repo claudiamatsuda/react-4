@@ -4,7 +4,7 @@ import { LogoConteiner } from '../../styles';
 
 const Nav = () => (
   <Fragment>
-    <LogoConteiner>
+    <LogoConteiner data-testid="nav-container">
       <img src={MarvelLogo} alt="logo" height="100px" />
     </LogoConteiner>
   </Fragment>

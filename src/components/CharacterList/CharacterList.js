@@ -10,7 +10,7 @@ const CharacterListConteiner = styled.div`
 `;
 
 const CharacterList = props => (
-  <CharacterListConteiner>
+  <CharacterListConteiner data-testid="characterlist-container">
     {props.characters.map(chrt => (
       <CharacterListItem character={chrt} key={chrt.id} />
     ))}

@@ -10,14 +10,13 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <div data-testid="searchbar-container">
         <Field
           name="searchform"
           placeholder="Buscar Personagens"
           component={SearchForm}
           type="text"
           onChange={e => this.props.requestCharacters(e.target.value)}
-          data-testid="SearchBar"
         />
       </div>
     );
